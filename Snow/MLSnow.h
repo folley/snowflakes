@@ -14,4 +14,6 @@
 @property ccColor4B snowflakesColor;
 @property CGRect snowingArea;
 
+- (id)initWithLayer:(CCLayer*)theLayer;
+
 @end

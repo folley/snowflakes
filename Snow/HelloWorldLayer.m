@@ -9,6 +9,7 @@
 
 #import "HelloWorldLayer.h"
 #import "MLSnow.h"
+#import "MLSnowfleake.h"
 
 @implementation HelloWorldLayer
 
@@ -38,11 +39,15 @@
 		label.position =  ccp( size.width /2 , size.height/2 );
 		[self addChild: label z:1];
         
-        //[self addBG];
+        [self addBG];
 
-        MLSnow *snow = [MLSnow new];
-        snow.snowingArea = CGRectMake(10, 10, 100, 100);
+        MLSnow *snow = [[MLSnow alloc] initWithLayer:self];
+        snow.snowingArea = CGRectMake(0, 0, size.width, size.height);
         [self addChild:snow z:30];
+        
+//        MLSnowfleake *snowfleake = [MLSnowfleake new];
+//        [snowfleake setSnowfleakeWithSize:CGSizeMake(100, 100) position:ccp(100,100) andOpacity:1];
+//        [self addChild:snowfleake.snowfleakeSprite z:500];
     }
 	return self;
 }

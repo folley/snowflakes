@@ -18,7 +18,7 @@
     CCSprite *snowfleakeSprite;
 }
 
-- (CCSprite*)setSnowfleakeWithSize:(CGSize)size position:(CGPoint)position andOpacity:(GLubyte)opacity;
+- (void)setSnowfleakeWithSize:(float)width position:(CGPoint)position andOpacity:(GLubyte)opacity;
 - (void)animateBouncingAnimationInTime:(float)time andWidth:(float)width;
 - (void)animateFallingDownInTime:(float)time andHeight:(float)height;
 - (void)animateFadingAfterDelay:(float)delayTime totalFadeTime:(float)time andTargetOpacity:(GLubyte)opacity;

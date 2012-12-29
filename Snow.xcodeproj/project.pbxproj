@@ -21,7 +21,7 @@
 		E695E0A8168F08650090BBFD /* Icon-Small-50.png in Resources */ = {isa = PBXBuildFile; fileRef = E695E0A7168F08650090BBFD /* Icon-Small-50.png */; };
 		E695E0AA168F08650090BBFD /* Icon-Small.png in Resources */ = {isa = PBXBuildFile; fileRef = E695E0A9168F08650090BBFD /* Icon-Small.png */; };
 		E695E0AC168F08650090BBFD /* Icon-Small@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E695E0AB168F08650090BBFD /* Icon-Small@2x.png */; };
-		E695E0AE168F08650090BBFD /* Icon.png in Resources */ = {isa = PBXBuildFile; fileRef = E695E0AD168F08650090BBFD /* Icon.png */; };
+		E695E0AE168F08650090BBFD /* v in Resources */ = {isa = PBXBuildFile; fileRef = E695E0AD168F08650090BBFD /* v */; };
 		E695E0B0168F08650090BBFD /* Icon@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = E695E0AF168F08650090BBFD /* Icon@2x.png */; };
 		E695E0B3168F08650090BBFD /* iTunesArtwork in Resources */ = {isa = PBXBuildFile; fileRef = E695E0B2168F08650090BBFD /* iTunesArtwork */; };
 		E695E0B8168F08650090BBFD /* CCAction.m in Sources */ = {isa = PBXBuildFile; fileRef = E695E0B7168F08650090BBFD /* CCAction.m */; };
@@ -142,7 +142,7 @@
 		E695E0A7168F08650090BBFD /* Icon-Small-50.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small-50.png"; path = "Resources/Icon-Small-50.png"; sourceTree = "<group>"; };
 		E695E0A9168F08650090BBFD /* Icon-Small.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small.png"; path = "Resources/Icon-Small.png"; sourceTree = "<group>"; };
 		E695E0AB168F08650090BBFD /* Icon-Small@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon-Small@2x.png"; path = "Resources/Icon-Small@2x.png"; sourceTree = "<group>"; };
-		E695E0AD168F08650090BBFD /* Icon.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = Icon.png; path = Resources/Icon.png; sourceTree = "<group>"; };
+		E695E0AD168F08650090BBFD /* v */ = {isa = PBXFileReference; lastKnownFileType = file; name = v; path = Resources/v; sourceTree = "<group>"; };
 		E695E0AF168F08650090BBFD /* Icon@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = "Icon@2x.png"; path = "Resources/Icon@2x.png"; sourceTree = "<group>"; };
 		E695E0B1168F08650090BBFD /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; name = Info.plist; path = Resources/Info.plist; sourceTree = "<group>"; };
 		E695E0B2168F08650090BBFD /* iTunesArtwork */ = {isa = PBXFileReference; lastKnownFileType = file; name = iTunesArtwork; path = Resources/iTunesArtwork; sourceTree = "<group>"; };
@@ -449,7 +449,7 @@
 				E695E0A7168F08650090BBFD /* Icon-Small-50.png */,
 				E695E0A9168F08650090BBFD /* Icon-Small.png */,
 				E695E0AB168F08650090BBFD /* Icon-Small@2x.png */,
-				E695E0AD168F08650090BBFD /* Icon.png */,
+				E695E0AD168F08650090BBFD /* v */,
 				E695E0AF168F08650090BBFD /* Icon@2x.png */,
 				E695E0B1168F08650090BBFD /* Info.plist */,
 				E695E0B2168F08650090BBFD /* iTunesArtwork */,
@@ -824,7 +824,7 @@
 				E695E0A8168F08650090BBFD /* Icon-Small-50.png in Resources */,
 				E695E0AA168F08650090BBFD /* Icon-Small.png in Resources */,
 				E695E0AC168F08650090BBFD /* Icon-Small@2x.png in Resources */,
-				E695E0AE168F08650090BBFD /* Icon.png in Resources */,
+				E695E0AE168F08650090BBFD /* v in Resources */,
 				E695E0B0168F08650090BBFD /* Icon@2x.png in Resources */,
 				E695E0B3168F08650090BBFD /* iTunesArtwork in Resources */,
 			);
