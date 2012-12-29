@@ -24,9 +24,10 @@
     CGContextRef context = UIGraphicsGetCurrentContext();
     
     CGContextSetAlpha(context, opacity);
+    CGContextSetFillColorWithColor(context, [UIColor whiteColor].CGColor);
+    CGContextSetStrokeColorWithColor(context, [UIColor whiteColor].CGColor);
     CGContextFillEllipseInRect(context, CGRectMake(170,0,width,width));
-    CGContextSetFillColorWithColor(context, [UIColor redColor].CGColor);
-    CGContextSetStrokeColorWithColor(context, [UIColor blueColor].CGColor);
+    
     CGContextDrawPath(context,kCGPathStroke);
 
     UIImage *finalImage = UIGraphicsGetImageFromCurrentImageContext();
