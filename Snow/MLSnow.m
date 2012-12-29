@@ -7,32 +7,38 @@
 //
 
 #import "MLSnow.h"
+#import "MLSnowfleake.h"
 
 @implementation MLSnow
 
 @synthesize snowflakesColor;
 @synthesize snowingArea;
 
-- (float)randomOpacity
+- (float)randomOpacityFromRange:(float)startPoint andEndPoint:(float)endPoint
 {
-    float randomOpacity = arc4random();
-    return randomOpacity/255;
+    float randomOpacity = arc4random() + startPoint;
+    return randomOpacity;
 }
 
-- (void)createSnowflake
+- (void)createSnowflakes
 {
-//    //CCSprite *snowflake = [CCSprite sprite]
-//    glLineWidth(4);
-//    CGPoint circleCenter = ccp(10,10);
-//    drawCircle( circleCenter, 10, 0, 30, NO);
+    MLSnowfleake *snowfleake = [MLSnowfleake new];
+    float x = arc4random() % (int)self.snowingArea.size.width;
+    float y = self.snowingArea.size.height;
+    
+    x=100;
+    y=100;
+    [snowfleake setSnowfleakeWithSize:CGSizeMake(20, 20) position:ccp(x,y) andOpacity:100/255.f];
+    [self addChild:snowfleake z:50];
+    NSLog(@"123");
 }
 
 - (id)init
 {
     if( self = [super init] ) {
-        self.snowflakesColor = ccc4(255, 255, 255, 255); // white
-        self.snowingArea = [CCDirector sharedDirector].winSize;
-        [self createSnowflake];
+        self.snowflakesColor = ccc4(255, 255, 255, 255);
+        self.snowingArea = CGRectMake(0, 0, [CCDirector sharedDirector].winSize.width, [CCDirector sharedDirector].winSize.height);
+        [self schedule:@selector(createSnowflakes) interval:0.1f];
     }
     return self;
 }

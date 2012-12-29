@@ -12,6 +12,6 @@
 @interface MLSnow : CCSprite
 
 @property ccColor4B snowflakesColor;
-@property CGSize snowingArea;
+@property CGRect snowingArea;
 
 @end

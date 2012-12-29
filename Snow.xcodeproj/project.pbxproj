@@ -123,6 +123,7 @@
 		E695E1F6168F08680090BBFD /* RootViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E695E1F5168F08680090BBFD /* RootViewController.m */; };
 		E695E1F9168F08680090BBFD /* HelloWorldLayer.m in Sources */ = {isa = PBXBuildFile; fileRef = E695E1F8168F08680090BBFD /* HelloWorldLayer.m */; };
 		E695E202168F08740090BBFD /* MLSnow.m in Sources */ = {isa = PBXBuildFile; fileRef = E695E200168F08740090BBFD /* MLSnow.m */; };
+		E695E205168F29C90090BBFD /* MLSnowfleake.m in Sources */ = {isa = PBXBuildFile; fileRef = E695E204168F29C90090BBFD /* MLSnowfleake.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -363,6 +364,8 @@
 		E695E1FA168F08680090BBFD /* GameConfig.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = GameConfig.h; sourceTree = "<group>"; };
 		E695E200168F08740090BBFD /* MLSnow.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSnow.m; sourceTree = "<group>"; };
 		E695E201168F08740090BBFD /* MLSnow.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSnow.h; sourceTree = "<group>"; };
+		E695E203168F29C90090BBFD /* MLSnowfleake.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MLSnowfleake.h; sourceTree = "<group>"; };
+		E695E204168F29C90090BBFD /* MLSnowfleake.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MLSnowfleake.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -419,8 +422,10 @@
 		E695E09F168F08650090BBFD /* Snow */ = {
 			isa = PBXGroup;
 			children = (
-				E695E200168F08740090BBFD /* MLSnow.m */,
+				E695E203168F29C90090BBFD /* MLSnowfleake.h */,
+				E695E204168F29C90090BBFD /* MLSnowfleake.m */,
 				E695E201168F08740090BBFD /* MLSnow.h */,
+				E695E200168F08740090BBFD /* MLSnow.m */,
 				E695E1F1168F08670090BBFD /* AppDelegate.h */,
 				E695E1F2168F08670090BBFD /* AppDelegate.m */,
 				E695E1F4168F08680090BBFD /* RootViewController.h */,
@@ -931,6 +936,7 @@
 				E695E1F6168F08680090BBFD /* RootViewController.m in Sources */,
 				E695E1F9168F08680090BBFD /* HelloWorldLayer.m in Sources */,
 				E695E202168F08740090BBFD /* MLSnow.m in Sources */,
+				E695E205168F29C90090BBFD /* MLSnowfleake.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1024,6 +1030,7 @@
 				E695E1FF168F08680090BBFD /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
