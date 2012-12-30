@@ -24,27 +24,22 @@ CCLayer *layer;
 
 - (void)createSnowflakes:(ccTime)dt
 {
-    MLSnowfleake *snowfleake = [MLSnowfleake new];
-    float x = arc4random() % (int)self.snowingArea.size.width;
-    float y = self.snowingArea.size.height+50;
-    float snowfleakeSize = arc4random() % (int)50 + 20.f;
-    float time = arc4random() % 5 + 4;
-    
-    NSLog(@"%f", snowfleakeSize);
+    MLSnowfleake *snowfleake = [[MLSnowfleake alloc] initWithSnowingArea:self.snowingArea];
+    float x = arc4random() % (int)self.snowingArea.size.width + self.snowingArea.origin.x;
+    float y = 200;//self.snowingArea.size.height-50;
+    float snowfleakeSize = arc4random() % (int)30 + 20.f;
+//    float time = arc4random() % 5 + 4;
 
-    [snowfleake setSnowfleakeWithSize:snowfleakeSize position:ccp(x,y) andOpacity:[self randomOpacity]];
+    [snowfleake setSnowfleakeWithSize:snowfleakeSize position:ccp(0,0) andOpacity:1];
     [layer addChild:snowfleake.snowfleakeSprite z:50];
     
-    [snowfleake animateBouncingAnimationInTime:1 andWidth:10.f];
-    [snowfleake animateFallingDownInTime:time andHeight:self.snowingArea.size.height+200];
-    [snowfleake animateFadingAfterDelay:1 totalFadeTime:time andTargetOpacity:0];
-    
-    [self runAction:[CCSequence actionOne:[CCDelayTime actionWithDuration:time+0.5f]
-                                            two:[CCCallBlock actionWithBlock:^(void){
-        [layer removeChild:snowfleake.snowfleakeSprite cleanup:YES];}]]];
-    
-    snowfleake.snowfleakeSprite.scale = 20/snowfleakeSize;
-
+//    [snowfleake animateBouncingAnimationInTime:0.1 andWidth:50.f];
+//    [snowfleake animateFallingDownInTime:time andHeight:self.snowingArea.size.height];
+//    [snowfleake animateFadingAfterDelay:1 totalFadeTime:time andTargetOpacity:0];
+//
+//    [self runAction:[CCSequence actionOne:[CCDelayTime actionWithDuration:2*time+0.5f]
+//                                            two:[CCCallBlock actionWithBlock:^(void){
+//        [layer removeChild:snowfleake.snowfleakeSprite cleanup:YES];}]]];
 }
 
 - (id)initWithLayer:(CCLayer*)theLayer
@@ -52,7 +47,13 @@ CCLayer *layer;
     if( self = [super init] ) {
         layer = theLayer;
         self.snowflakesColor = ccc4(0, 0, 0, 255);
-        self.snowingArea = CGRectMake(-50, -50, [CCDirector sharedDirector].winSize.width+100, [CCDirector sharedDirector].winSize.height+100);
+        self.snowingArea = CGRectMake(0, 0, [CCDirector sharedDirector].winSize.width, [CCDirector sharedDirector].winSize.height);
+        
+                self.snowingArea = CGRectMake(30, 30, 50, [CCDirector sharedDirector].winSize.height);
+        
+        MLSnowfleake *snowfleake = [[MLSnowfleake alloc] initWithSnowingArea:self.snowingArea];
+        [snowfleake setSnowfleakeCicle];
+        
         [self schedule:@selector(createSnowflakes:) interval:0.2f];
     }
     return self;
